@@ -1,0 +1,197 @@
+// Custom
+// ------
+// This file is used to define custom overrides and
+// style changes to be used for building your theme.
+// If you wish to use the SCSS syntax, please use this.
+// Documentation: http://sass-lang.com/docs/yardoc/_index.html
+
+// Import variables and mixins to be used.
+@import "_config.sass";
+@import "_sprites.sass";
+
+body, html {
+  font-family : sans-serif;
+  height : 100%;
+}
+
+body {
+
+  &.front {
+
+    #first-time {
+      display: none;
+    }
+
+    #content-header {
+      display: none;
+    }
+  } 
+}
+
+/**
+ *  Menu Items
+ *
+ */
+#navigation {
+  @include span-columns(12);
+
+  background: #000000;
+  position: fixed;
+  width: $max-width;
+  z-index: 999;
+}
+/* Home */
+.menu-218,
+/* Mathcup Left */
+.menu-483,
+/* Matchup Right */
+.menu-482,
+/* ? */
+.menu-437 {
+  @include span-columns(2.4 of 12);
+
+  font-family: 'BrannbollFet';
+  font-size: 2.15em;
+  height: 100px;
+  line-height: 95px;
+  text-align: center;
+
+  a:hover,
+  a:focus {
+    -webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    color: #fff !important;
+  }
+  a {
+    color: #FFDE00 !important;
+    display:inline-block
+  }
+}
+
+// setting base styles to image containers
+//[id*="bg__"]
+#block-views-top_artists-block,
+#block-views-mathcup_left-block,
+#block-views-matchup_right-block {
+  //text-indent: -9999px;
+
+  /* fix background */
+  background-attachment: fixed;
+
+  /* center it */
+  background-position: center center;
+
+  /* Scale it nicely to the element */
+  background-size: cover;
+
+  /* just make it look a bit better ;) */
+  &:nth-child(2n) {
+    box-shadow: inset 0 0 1em #111;
+  }
+}
+
+#block-views-top_artists-block {
+  background-image: url('../images/parallax1.jpg');
+  height: 40vh;
+}
+
+#block-views-mathcup_left-block {
+  background-image: url('../images/parallax2.jpg');
+  height: 140vh;
+}
+
+#block-views-matchup_right-block {
+  background-image: url('../images/parallax3.jpg');
+  height: 140vh;
+}
+
+#bg__bazz {
+  height: 100vh;
+
+  background-image: url('../images/parallax1.jpg');
+}
+
+/**
+ *  Top Artists
+ *
+ *
+ */
+#block-views-top_artists-block {
+
+  .view-top-artists {
+    margin: 0 auto;
+    width: 760px;
+  }
+  
+  .views-row {
+    float: left;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/*#parallax {
+
+  #bg__foo {
+
+    .top_title {
+      color: #fff;
+      //float: left;
+      margin: 0 auto;
+      padding-top: 30px;
+      width: 200px;
+    }
+
+    .top_wrap {
+      margin: 0 auto;
+      width: 780px;
+
+      .top_one,
+      .top_two,
+      .top_three {
+        background-color: #ffff00;
+        float: left;
+        height: 240px;
+        margin-right: 20px;
+        width: 240px;
+      }
+    }
+  }
+
+  #bg__bar {
+
+    .vs_wrap {
+      margin: 0 auto;
+      width: 1300px;
+    }
+
+    .art_left,
+    .art_right {
+      //background-color: #ffff00;
+      box-shadow: inset 0 0 1em #111;
+      float: left;
+      height: 493px;
+      overflow: auto;
+      width: 500px;
+    }
+
+    .vs {
+      color: #ff0000;
+      float: left;
+      font-size: 130px;
+      margin: 0 55px;
+      padding-top: 360px;
+    }
+  }
+
+  #bg__baz {
+    
+  }
+}*/
