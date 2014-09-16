@@ -1,6 +1,6 @@
 name = Basic
 description = HTML5, SASS, Responsive grid base theme.
-screenshot = images/screenshot.gif
+screenshot = images/optimized/screenshot.gif
 core = "7.x"
 project = "basic"
 engine = phptemplate
@@ -33,9 +33,8 @@ stylesheets[all][] = css/normalize.css
 stylesheets[print][] = css/print.css
 
 ; Scripts
+scripts[] = js/build/scripts.js
 scripts[] = js/build/modernizr.js
-scripts[] = js/jq.js
-scripts[] = js/script.js
 
 settings[basic_tabs] = 1
 settings[basic_breadcrumb] = 1
@@ -46,9 +45,9 @@ settings[basic_ie_enabled] = 0
 settings[basic_ie_enabled_versions][ie8] = 0
 settings[basic_ie_enabled_versions][ie9] = 0
 settings[basic_ie_enabled_versions][ie10] = 0
-; Information added by Drupal.org packaging script on 2014-05-15
-version = "7.x-4.0-beta2"
+; Information added by Drupal.org packaging script on 2014-06-30
+version = "7.x-4.0-beta3"
 core = "7.x"
 project = "basic"
-datestamp = "1400180045"
+datestamp = "1404170932"
 
